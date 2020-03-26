@@ -3,8 +3,8 @@
 ### Built on top of [Symfony 4][1]
 ### The user interface is built with [Bootstrap 4][2]
 
-![GitHub](https://raw.githubusercontent.com/rand0mdev/rim-edu/master/docs/images/home-screenshot.ar.png)
-![GitHub](https://raw.githubusercontent.com/rand0mdev/rim-edu/master/docs/images/home-screenshot.fr.png)
+![GitHub](https://raw.githubusercontent.com/rand0mdev/rim-edu/master/docs/images/home-screenshot_ar.png)
+![GitHub](https://raw.githubusercontent.com/rand0mdev/rim-edu/master/docs/images/home-screenshot_fr.png)
 
 Online Demo
 -----------
@@ -32,11 +32,13 @@ Installation
    
 Usage
 -----
-There's no need to configure anything to run the application. If you have
+You have to configure the database first, and if you have
 [installed Symfony][5], run this command and access the application in your
 browser at the given URL (<https://localhost:8000> by default):
    ```
    $ cd rim-edu/
+   $ bin/console doctrine:database:create
+   $ bin/console doctrine:migrations:migrate
    $ symfony serve
    ```
 If you don't have the Symfony binary installed, run `php -S localhost:8000 -t public/`
